@@ -1,10 +1,8 @@
 import sys
-import pytest
 import os
-import time
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
 import allure
-from pages.quastion_page import QuastionPage
 from data.data import Constants
 from pages.order_page import OrderPage
 from pages.main_page import MainPage

@@ -3,7 +3,7 @@ import pytest
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 import allure
-from pages.quastion_page import QuastionPage
+from pages.main_page import MainPage
 from data.data import Constants
 
 
@@ -23,8 +23,7 @@ class TestQuastionPage:
     ])
     def test_check_answers(self, driver, test_method):
         driver.get(Constants.url_samokat)
-        quastion_page = QuastionPage(driver)
+        main_page = MainPage(driver)
         
-        # Получаем метод по имени и вызываем его
-        method = getattr(quastion_page, test_method)
+        method = getattr(main_page, test_method)
         method()
